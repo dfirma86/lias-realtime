@@ -2,10 +2,10 @@ services:
   - type: web
     name: alias-ws
     env: node
-    rootDir: server
+    rootDir: .             # run from repo root (where package.json is)
     plan: free
-    buildCommand: "npm ci"
-    startCommand: "node index.js"
+    buildCommand: "npm install"   # avoid lockfile requirement
+    startCommand: "node server/index.js"
     envVars:
       - key: NODE_ENV
         value: production
