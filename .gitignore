@@ -1,0 +1,14 @@
+# root
+node_modules
+npm-debug.log*
+pnpm-lock.yaml
+yarn.lock
+
+# web
+web/.next
+web/.env.local
+web/.env.production
+
+# misc
+.DS_Store
+*.zip

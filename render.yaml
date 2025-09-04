@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: alias-ws
+    env: node
+    rootDir: server
+    plan: free
+    buildCommand: "npm ci"
+    startCommand: "node index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_ORIGIN
+        value: "*"
+    healthCheckPath: "/health"
+    autoDeploy: true

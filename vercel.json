@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm i && npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "github": { "silent": true },
+  "rewrites": [ { "source": "/(.*)", "destination": "/$1" } ]
+}

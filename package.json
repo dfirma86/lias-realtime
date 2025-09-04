@@ -1,0 +1,22 @@
+{
+  "name": "alias-realtime",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n WEB,WS \"npm:dev:web\" \"npm:dev:server\"",
+    "dev:web": "cross-env PORT=3000 next dev web",
+    "dev:server": "cross-env WS_PORT=4000 nodemon server/index.js",
+    "test": "node tests/run.js"
+  },
+  "dependencies": {
+    "next": "14.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.0.2"
+  }
+}
